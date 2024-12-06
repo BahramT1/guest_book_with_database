@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="icon" href="favicon.webp">
+</head>
+<body>
+    <h1>Contact Form</h1>
+
+    <form method="POST" action="confirm" id="contactForm">
+        <label for="fname">
+            First Name
+            <input type="text" name="fname" id="fname" required>
+            <span id="firstNameError" class="error hidden">First name is required</span>
+        </label>
+
+        <label for="lname">
+            Last Name
+            <input type="text" name="lname" id="lname" required>
+            <span id="lastNameError" class="error hidden">Last name is required</span>
+        </label>
+
+        <label for="title">
+            Job Title
+            <input type="text" name="title" id="title">
+        </label>
+
+        <label for="company">
+            Company
+            <input type="text" name="company" id="company">
+        </label>
+
+        <label for="email">
+            Email Address
+            <input type="email" name="email" id="email" required>
+            <span id="emailError" class="error hidden">Invalid email address</span>
+        </label>
+
+        <label for="url">
+            LinkedIn URL
+            <input type="text" name="url" id="url">
+            <span id="linkedinError" class="error hidden">URL must start with "https://linkedin.com/in/"</span>
+        </label>
+
+        <div class="row">
+            <div>
+                <label for="meet">How did we meet?</label>
+                <select id="meet" name="meet">
+                    <option value="Please">Please Select</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Inperson">In person</option>
+                    <option value="Other">Other</option>
+                </select>
+                <span id="meetError" class="error hidden">This field is required</span>
+            </div>
+
+            <div>
+                <label for="other">Other (please specify)</label>
+                <input type="text" name="other" id="other" class="hidden">
+            </div>
+        </div>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+
+        <label>
+            <input type="checkbox" value="add" name="addMe" id="addMe"> Please add me to your mailing list
+        </label>
+
+        <div class="email-format hidden">
+            <label for="format">Choose an email format:</label>
+            <label for="HTML">
+                <input type="radio" id="HTML" name="method" value="HTML"> HTML
+            </label>
+            <label for="Text">
+                <input type="radio" id="Text" name="method" value="Text"> Text
+            </label>
+        </div>
+
+        <input type="submit" id="submitButton" name="submit" value="Submit">
+    </form>
+</body>
+</html>

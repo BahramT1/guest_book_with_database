@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+    <h1>Thank You!</h1>
+    <p>Your submission has been recorded. Here are the details:</p>
+
+    <!-- Table to display submitted data -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>First Name</td>
+                <td><%= details.fname %></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><%= details.lname %></td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td><%= details.title %></td>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td><%= details.company %></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><%= details.email %></td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><%= details.url %></td>
+            </tr>
+            <tr>
+                <td>How We Met</td>
+                <td><%= details.meet %></td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td><%= details.other %></td>
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td><%= details.message %></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/">Submit Another Response</a>
+</body>
+</html>
